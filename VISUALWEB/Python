@@ -1,0 +1,23 @@
+import subprocess
+
+
+def pyautogui():
+    try:
+        subprocess.check_call(['pip', 'install', 'pyautogui'])
+        print("pyautogui foi instalado com sucesso!")
+    except subprocess.CalledProcessError as e:
+        print(f"Erro ao instalar pyautogui: {e}")
+import time
+import pyautogui
+
+time.sleep(5)
+
+pyautogui.press('win')
+
+time.sleep(1)
+
+pyautogui.write('Microsoft Edge')
+
+time.sleep(1)
+
+pyautogui.press('enter')
